@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Farmácia Tem — Saúde e Agilidade</title>
+
+<meta name="description" content="Farmácia Tem • Delivery rápido, atendimento humanizado e os melhores preços da região.">
+<meta name="keywords" content="farmácia, medicamentos, delivery, saúde, vitaminas">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+
+:root{
+    --primary:#0FB7A7;
+    --primary-dark:#0A8E82;
+    --primary-light:#E8FAF8;
+
+    --accent:#E13C34;
+
+    --text:#111827;
+    --text-soft:#6B7280;
+
+    --white:#fff;
+    --border:#E5E7EB;
+
+    --bg:#F8FAFC;
+
+    --shadow:
+    0 10px 30px rgba(15,183,167,.12);
+
+    --radius:18px;
+
+    --transition:.35s cubic-bezier(.4,0,.2,1);
+
+    --container:1180px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:100%;
+    max-width:var(--container);
+    margin:auto;
+    padding:0 24px;
+}
+
+section{
+    padding:90px 0;
+}
+
+/* TOP BAR */
+
+.top-bar{
+    background:var(--accent);
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    font-size:.85rem;
+    font-weight:700;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+}
+
+.nav{
+    height:85px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-text h2{
+    font-size:1.1rem;
+    line-height:1;
+}
+
+.logo-text span{
+    color:var(--primary);
+}
+
+.logo-text p{
+    font-size:.75rem;
+    color:var(--text-soft);
+}
+
+.menu{
+    display:flex;
+    gap:34px;
+}
+
+.menu a{
+    font-weight:600;
+    color:var(--text-soft);
+    transition:var(--transition);
+}
+
+.menu a:hover{
+    color:var(--primary);
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:14px 26px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+    border:none;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.2);
+    transition:.5s;
+}
+
+.btn:hover::before{
+    left:100%;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    background:var(--primary-dark);
+    box-shadow:var(--shadow);
+}
+
+.btn-outline{
+    border:2px solid var(--primary);
+    color:var(--primary-dark);
+    background:#fff;
+}
+
+.btn-outline:hover{
+    background:var(--primary-light);
+}
+
+/* HERO */
+
+.hero{
+    min-height:92vh;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    135deg,
+    #E7FAF7 0%,
+    #FFFFFF 60%
+    );
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    background:rgba(15,183,167,.08);
+
+    border-radius:50%;
+
+    top:-180px;
+    right:-150px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    background:#fff;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:26px;
+}
+
+.hero h1{
+    font-size:clamp(2.7rem,5vw,5rem);
+    line-height:1.05;
+    margin-bottom:24px;
+}
+
+.hero h1 span{
+    color:var(--primary);
+}
+
+.hero p{
+    color:var(--text-soft);
+    font-size:1.1rem;
+    line-height:1.8;
+    margin-bottom:34px;
+    max-width:560px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.hero-live{
+    margin-top:28px;
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    background:#fff;
+
+    padding:12px 18px;
+
+    border-radius:999px;
+
+    box-shadow:var(--shadow);
+
+    font-weight:600;
+
+    color:var(--text-soft);
+}
+
+.hero-image{
+    position:relative;
+}
+
+.hero-image img{
+    border-radius:30px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    display:inline-block;
+
+    background:var(--primary-light);
+
+    color:var(--primary-dark);
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    margin-bottom:16px;
+}
+
+.section-title h2{
+    font-size:clamp(2rem,4vw,3rem);
+    margin-bottom:12px;
+}
+
+.section-title p{
+    color:var(--text-soft);
+    max-width:620px;
+    margin:auto;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+}
+
+.card{
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:34px;
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow);
+    border-color:var(--primary);
+}
+
+.card-icon{
+    width:64px;
+    height:64px;
+
+    border-radius:18px;
+
+    background:var(--primary-light);
+
+    color:var(--primary-dark);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.5rem;
+
+    margin-bottom:22px;
+}
+
+.card h3{
+    margin-bottom:12px;
+    font-size:1.2rem;
+}
+
+.card p{
+    color:var(--text-soft);
+    line-height:1.7;
+}
+
+/* PRODUCTS */
+
+.products{
+    background:#fff;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+}
+
+.product{
+    background:#fff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow);
+}
+
+.product-image{
+    height:240px;
+    overflow:hidden;
+}
+
+.product-image img{
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.product:hover img{
+    transform:scale(1.08);
+}
+
+.product-body{
+    padding:24px;
+}
+
+.product-category{
+    color:var(--primary);
+    font-size:.78rem;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.product h3{
+    margin-bottom:10px;
+}
+
+.product p{
+    color:var(--text-soft);
+    margin-bottom:18px;
+    line-height:1.7;
+}
+
+.product-price{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#9CA3AF;
+}
+
+.new-price{
+    font-size:1.6rem;
+    font-weight:800;
+}
+
+/* DELIVERY */
+
+.delivery{
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary-dark),
+    var(--primary)
+    );
+
+    color:#fff;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.delivery::before{
+    content:'';
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    top:-100px;
+    right:-100px;
+}
+
+.delivery h2{
+    font-size:clamp(2rem,4vw,3rem);
+    margin-bottom:20px;
+}
+
+.delivery p{
+    max-width:620px;
+    margin:auto auto 34px;
+    opacity:.9;
+    line-height:1.8;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-card{
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:36px;
+
+    border:1px solid var(--border);
+}
+
+.contact-item{
+    display:flex;
+    gap:18px;
+    margin-bottom:26px;
+}
+
+.contact-icon{
+    width:52px;
+    height:52px;
+
+    border-radius:16px;
+
+    background:var(--primary-light);
+
+    color:var(--primary-dark);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.2rem;
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    min-height:420px;
+    border:none;
+    border-radius:24px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:#fff;
+    padding:60px 0 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-title{
+    margin-bottom:20px;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.footer-links a{
+    color:rgba(255,255,255,.7);
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    margin-top:50px;
+    padding-top:24px;
+    border-top:1px solid rgba(255,255,255,.1);
+
+    text-align:center;
+
+    color:rgba(255,255,255,.5);
+}
+
+/* FLOAT WHATS */
+
+.float{
+    position:fixed;
+
+    right:24px;
+    bottom:24px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.8rem;
+
+    box-shadow:
+    0 10px 30px rgba(37,211,102,.4);
+
+    z-index:999;
+}
+
+/* ANIMATION */
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:980px){
+
+.hero-grid,
+.contact-grid,
+.footer-grid{
+    grid-template-columns:1fr;
+}
+
+.hero{
+    padding:80px 0;
+}
+
+.menu{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+💊 Delivery rápido • Atendimento humanizado • Ofertas da semana disponíveis
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container nav">
+
+<div class="logo">
+
+<img src="logo.jpg">
+
+<div class="logo-text">
+<h2>Farmácia <span>Tem</span></h2>
+<p>Sua saúde em primeiro lugar</p>
+</div>
+
+</div>
+
+<div class="menu">
+<a href="#servicos">Serviços</a>
+<a href="#produtos">Produtos</a>
+<a href="#delivery">Delivery</a>
+<a href="#contato">Contato</a>
+</div>
+
+<a href="https://wa.me/5588997428848" target="_blank" class="btn btn-primary">
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+</a>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div class="reveal">
+
+<div class="hero-badge">
+<i class="fa-solid fa-shield-heart"></i>
+Atendimento Humanizado
+</div>
+
+<h1>
+Sua saúde em <span>boas mãos</span> com entrega rápida.
+</h1>
+
+<p>
+Medicamentos, vitaminas, dermocosméticos e suplementos com os melhores preços da região.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#produtos" class="btn btn-primary">
+Ver ofertas
+</a>
+
+<a href="#contato" class="btn btn-outline">
+Fale conosco
+</a>
+
+</div>
+
+<div class="hero-live">
+🔥 18 pessoas comprando agora
+</div>
+
+</div>
+
+<div class="hero-image reveal">
+
+<img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1000">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="servicos">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span>NOSSOS DIFERENCIAIS</span>
+
+<h2>Por que escolher a Farmácia Tem?</h2>
+
+<p>
+Entrega rápida, atendimento especializado e produtos originais com preços acessíveis.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card reveal">
+
+<div class="card-icon">
+<i class="fa-solid fa-truck-fast"></i>
+</div>
+
+<h3>Delivery Expresso</h3>
+
+<p>
+Receba seus medicamentos em até 30 minutos na sua casa.
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<div class="card-icon">
+<i class="fa-solid fa-user-doctor"></i>
+</div>
+
+<h3>Equipe Especializada</h3>
+
+<p>
+Farmacêuticos preparados para orientar e atender você.
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<div class="card-icon">
+<i class="fa-solid fa-tags"></i>
+</div>
+
+<h3>Preços Acessíveis</h3>
+
+<p>
+Promoções semanais e descontos especiais para clientes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="produtos">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span>OFERTAS</span>
+
+<h2>Produtos em destaque</h2>
+
+</div>
+
+<div class="product-grid">
+
+<div class="product reveal">
+
+<div class="product-image">
+<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800">
+</div>
+
+<div class="product-body">
+
+<div class="product-category">
+Dermocosméticos
+</div>
+
+<h3>Protetor Solar FPS 50</h3>
+
+<p>
+Proteção diária com textura leve e alta durabilidade.
+</p>
+
+<div class="product-price">
+<span class="old-price">R$59,90</span>
+<span class="new-price">R$39,90</span>
+</div>
+
+<a href="#" class="btn btn-primary" style="width:100%;">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<div class="product reveal">
+
+<div class="product-image">
+<img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800">
+</div>
+
+<div class="product-body">
+
+<div class="product-category">
+Vitaminas
+</div>
+
+<h3>Vitamina C 1g</h3>
+
+<p>
+Fortalece sua imunidade e combate o cansaço diário.
+</p>
+
+<div class="product-price">
+<span class="old-price">R$42,90</span>
+<span class="new-price">R$29,90</span>
+</div>
+
+<a href="#" class="btn btn-primary" style="width:100%;">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DELIVERY -->
+
+<section class="delivery" id="delivery">
+
+<div class="container reveal">
+
+<h2>Peça agora e receba rapidinho 🚀</h2>
+
+<p>
+Atendimento via WhatsApp com entrega expressa em toda a região.
+</p>
+
+<a href="https://wa.me/5588997428848" target="_blank" class="btn btn-outline" style="background:#fff;">
+<i class="fab fa-whatsapp"></i>
+Pedir Agora
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contato">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span>CONTATO</span>
+
+<h2>Estamos prontos para atender você</h2>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card reveal">
+
+<div class="contact-item">
+
+<div class="contact-icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+
+<div>
+<h3>Endereço</h3>
+<p>Centro • Guaraciaba do Norte - CE</p>
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<div class="contact-icon">
+<i class="fab fa-whatsapp"></i>
+</div>
+
+<div>
+<h3>WhatsApp</h3>
+<p>(88) 99742-8848</p>
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<div class="contact-icon">
+<i class="fa-solid fa-clock"></i>
+</div>
+
+<div>
+<h3>Horário</h3>
+<p>Seg a Sáb • 07h às 22h</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="reveal">
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18"
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h2 class="footer-title">
+Farmácia Tem
+</h2>
+
+<p style="color:rgba(255,255,255,.7); line-height:1.8;">
+Sua saúde em primeiro lugar com atendimento premium e entrega rápida.
+</p>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+Links
+</h3>
+
+<div class="footer-links">
+<a href="#">Início</a>
+<a href="#">Serviços</a>
+<a href="#">Produtos</a>
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+Contato
+</h3>
+
+<div class="footer-links">
+<a href="#">WhatsApp</a>
+<a href="#">Instagram</a>
+<a href="#">Localização</a>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Farmácia Tem • Todos os direitos reservados
+</div>
+
+</div>
+
+</footer>
+
+<!-- FLOAT -->
+
+<a href="https://wa.me/5588997428848" class="float">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+
+reveals.forEach(el => {
+
+const top = el.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+el.classList.add('active');
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
